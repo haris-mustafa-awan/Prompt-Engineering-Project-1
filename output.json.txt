@@ -1,0 +1,7 @@
+{
+"customer_name": "Sara Khan",
+"order_number": "#ORD-78234",
+"complaint_type": "Order not delivered",
+"severity_level": 4,
+"contact_phone": null
+}
