@@ -1,0 +1,39 @@
+You are a data extraction engine. Your task is to extract 
+specific information from the customer email provided below 
+and return it ONLY in valid JSON format. Do not include any 
+conversational text, explanations, or filler (e.g., "Here is 
+your JSON" or "Sure, I can help").
+
+Extract the following fields:
+{
+  "customer_name": "",
+  "order_number": "",
+  "complaint_type": "",
+  "severity_level": 0,
+  "contact_phone": ""
+}
+
+Rules:
+- If any field is not present in the email, return "null" for 
+  that field. Do not invent or hallucinate data.
+- severity_level should be a number from 1 (low) to 5 (critical), 
+  based on the tone and urgency of the email.
+- Output must start directly with { and contain nothing else 
+  outside the JSON object.
+
+Here is the customer email, enclosed within triple quotes:
+
+Subject: Order not delivered - urgent
+
+Hi team,
+
+My name is Sara Khan. I placed an order last week, order 
+number #ORD-78234. It still hasn't been delivered, and the 
+tracking hasn't updated either.
+
+This is very frustrating because I needed it as a gift, and 
+now it's late. Please resolve this quickly, or I will request 
+a refund.
+
+Thanks,
+Sara
